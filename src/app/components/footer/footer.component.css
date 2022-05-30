@@ -1,0 +1,39 @@
+/*Social links*/
+.gg-facebook,
+.gg-instagram {
+  margin: 0 20px;
+  cursor: pointer;
+}
+.gg-facebook {
+  color: #3b5998;
+}
+.gg-instagram {
+  color: #c32aa3;
+}
+/*footer*/
+.footer {
+  padding: 0;
+  margin-top: 0;
+  background: linear-gradient(whitesmoke, #75a5f5);
+}
+.footer .container {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.footer h5,
+.social-links {
+  flex: 1;
+  display: inline-block;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer h5 {
+  font-size: 1rem;
+  color: #ed2e2e;
+}

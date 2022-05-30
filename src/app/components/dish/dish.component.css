@@ -1,0 +1,67 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.dish-card {
+  height: 30rem;
+  width: 20rem;
+}
+ul li a {
+  border: 1px solid rgb(121, 20, 20);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #2563eb;
+}
+li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favorite {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: red;
+}
+.favorite.not {
+  color: grey !important;
+}
+.details {
+  padding: 0.5rem 1rem;
+  position: relative;
+  background-color: whitesmoke;
+}
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 0.85rem;
+  color: grey;
+  margin-right: 0.3rem;
+}
+.ingredients span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 1rem;
+  color: black;
+  margin-right: 0.3rem;
+  margin-bottom: 20px;
+}
+h5 {
+  margin-bottom: 3px;
+}

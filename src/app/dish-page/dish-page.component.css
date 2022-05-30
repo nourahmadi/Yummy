@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ecf4fd;
+  padding-bottom: 20px;
+}
+.name {
+  color: #2563eb;
+  font-size: 1.8rem;
+}
+.favorite {
+  font-size: 1.5rem;
+  color: red;
+}
+.favorite.not {
+  color: grey !important;
+}
+.favorite.not:hover {
+  cursor: pointer;
+}
+.origins {
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: grey;
+}
+.ingredients {
+  font-size: 1.2rem;
+  color: black;
+}
+span {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-right: 0.9rem;
+}
+.dish-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+img {
+  flex: 1;
+  width: 50%;
+}
+.dish-card {
+  background-color: white;
+  height: 392px;
+  flex: 1;
+  padding: 90px;
+}
+.dish-steps {
+  background-color: white;
+  border: 2px #2563eb solid;
+  width: 80vw;
+  margin: 20px auto;
+  padding-bottom: 40px;
+}
+.dish-steps h3,
+.dish-steps p {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+h3 {
+  color: red;
+  font-size: 1.5rem;
+}
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}

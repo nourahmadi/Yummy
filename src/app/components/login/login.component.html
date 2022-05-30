@@ -1,0 +1,81 @@
+<body>
+  <div class="container">
+    <div class="cover">
+      <div class="front">
+        <img src="assets/images/header-img/hero-dish.png" alt="" />
+        <div class="text">
+          <span class="text-1"
+            >Every dish is a <br />
+            new adventure</span
+          >
+          <span class="text-2">Let's get cooking!</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Login</div>
+          <form #loginForm="ngForm">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  required
+                  email
+                  class="form-control"
+                  ngModel
+                  name="email"
+                  #emailInput="ngModel"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <div
+                  *ngIf="emailInput.invalid && emailInput.dirty"
+                  class="alert alert-danger"
+                >
+                  Enter a valid Email address
+                </div>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  required
+                  class="form-control"
+                  ngModel
+                  name="password"
+                  minlength="4"
+                  #pwdInput="ngModel"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+                <div
+                  *ngIf="pwdInput.invalid && pwdInput.dirty"
+                  class="alert alert-danger"
+                >
+                  Enter a valid password of at least 4 characters long.
+                </div>
+              </div>
+              <button
+                (click)="login(loginForm)"
+                class="input-box"
+                type="submit"
+                value="Sumbit"
+                [disabled]="loginForm.invalid"
+              >
+                Submit
+              </button>
+              <div class="text sign-up-text">
+                Don't have an account?
+                <span class="signup-span">Signup</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,136 @@
+<body>
+  <div class="container">
+    <form action="">
+      <div class="input-boxes">
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <span class="details">Recipe Name</span>
+          <input
+            type="text"
+            required
+            text
+            minlength="3"
+            class="form-control"
+            ngModel
+            name="name"
+            #nameInput="ngModel"
+            id="exampleInputname1"
+            aria-describedby="nameHelp"
+            placeholder="Enter recipe name"
+          />
+          <div
+            *ngIf="nameInput.invalid && nameInput.dirty"
+            class="alert alert-danger"
+          >
+            Recipe's name must be 3 characters minimum
+          </div>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <span class="details">Recipe Category</span>
+          <select
+            class="form-control"
+            ngModel
+            name="category"
+            #categoryInput="ngModel"
+            id="categoryInputname1"
+            aria-placeholder="Select a Catergory"
+          >
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Fast Food">Fast Food</option>
+            <option value="Snack">Snack</option>
+            <option value="Pastry">Pastry</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <span class="details">Recipe Description</span>
+          <textarea
+            class="form-control"
+            ngModel
+            name="Description"
+            minlength="50"
+            #descriptionInput="ngModel"
+            id="descriptionInputname1"
+            placeholder="Type your recipe's description"
+            class="textarea form-control"
+            name="description"
+            id="form-description"
+            rows="7"
+            cols="20"
+            required=""
+          ></textarea>
+          <div
+            *ngIf="descriptionInput.invalid && descriptionInput.dirty"
+            class="alert alert-danger"
+          >
+            Enter a valid name address
+          </div>
+        </div>
+        <span class="details">Upload Image</span>
+        <div class="file-container" *ngIf="!file">
+          <input type="file" (change)="getFile($event)" class="file" />
+        </div>
+        <div *ngIf="file">
+          File:name : {{ file.name }} <br />
+          <button (click)="file = undefined" class="btn btn-primary">
+            Clear File
+          </button>
+        </div>
+        <br />
+        <button (click)="uploadFile()" class="btn btn-primary">
+          Upload image
+        </button>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <span class="details">Ingredients</span>
+          <input
+            type="text"
+            required
+            text
+            minlength="3"
+            class="form-control"
+            ngModel
+            name="ingerdient"
+            #ingerdientInput="ngModel"
+            id="exampleInputingerdient1"
+            aria-describedby="ingerdientHelp"
+            placeholder="Enter an ingerdient"
+          />
+          <div
+            *ngIf="nameInput.invalid && nameInput.dirty"
+            class="alert alert-danger"
+          >
+            Ingerdient's name must be 3 characters minimum
+          </div>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-envelope"></i>
+          <span class="details">Cook Time 🕑</span>
+          <input
+            type="text"
+            required
+            number
+            minlength="1"
+            class="form-control"
+            ngModel
+            name="time"
+            #timeInput="ngModel"
+            id="exampleInputtime1"
+            aria-describedby="timeHelp"
+            placeholder="Enter an time"
+          />
+          <div
+            *ngIf="timeInput.invalid && timeInput.dirty"
+            class="alert alert-danger"
+          >
+            Cook Time can only be a number
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-danger">SUBMIT RECIPE</button>
+    </form>
+  </div>
+</body>

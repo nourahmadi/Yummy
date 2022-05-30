@@ -1,0 +1,39 @@
+<div class="container">
+  <header>
+    <div class="container">
+      <div class="header-text">
+        <h1>Learn. Cook. Share.</h1>
+        <h1>Cooking Made easy.</h1>
+        <div class="txt-container">
+          <h3 class="bubble-txt">Got no Time and Effort to cook?</h3>
+          <h3 class="bubble-txt">
+            We have the recipes for you. Access our Recipe cards and make
+            yourself a yummy dish within minutes!
+          </h3>
+          <button (click)="scroll(target)" class="btn-browse">
+            Browse Dishes
+          </button>
+        </div>
+      </div>
+      <div class="header-img">
+        <img src="assets/images/header-img/hero-dish.png" />
+      </div>
+    </div>
+  </header>
+  <section #target class="look-up">
+    <h2>Find a dish!</h2>
+    <div class="input">
+      <input
+        type="text"
+        placeholder="What are you looking for?"
+        [(ngModel)]="searchTerm"
+        (keyup)="dishesReset()"
+      />
+      <button class="btn-search" (click)="search()">🔍</button>
+    </div>
+  </section>
+  <section class="dishes">
+    <app-dish></app-dish>
+  </section>
+  <app-footer></app-footer>
+</div>

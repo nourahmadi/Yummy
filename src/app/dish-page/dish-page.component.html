@@ -1,0 +1,37 @@
+<body>
+  <div class="dish-container">
+    <img src="{{ dish.imageUrl }}" alt="{{ dish.name }}" />
+    <div class="dish-card">
+      <H2 class="name"> Yummy {{ dish.name }} Recipe</H2>
+      <span class="favorite {{ dish.favorite ? '' : 'not' }} heart"> ❤ </span>
+      <span>🕑{{ dish.cookTime }}</span>
+      <span class="origins">{{ dish.origins }}</span>
+      <div class="ingredients">
+        <h3>Ingredients</h3>
+        <ul *ngFor="let ingredient of dish.ingredients">
+          <li>{{ ingredient }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="dish-container">
+    <div><img src="{{ dish.imageUrl }}" alt="{{ dish.name }}" /></div>
+    <div class="dish-card">
+      <div class="dish-info">
+        <H2 class="name"> Yummy {{ dish.name }} Recipe</H2>
+        <span>🕑{{ dish.cookTime }}</span>
+        <span class="origins">{{ dish.origins }}</span>
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul *ngFor="let ingredient of dish.ingredients">
+            <li>{{ ingredient }}</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  <!-- </div> -->
+  <div class="dish-steps">
+    <h3>Steps</h3>
+    <p>{{ dish.steps }}</p>
+  </div>
+</body>
